@@ -12,12 +12,64 @@ header {
     text-align: center;
 }
 
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 main {
     padding: 20px;
 }
 
 h1, h2 {
     margin: 0 0 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
 footer {
@@ -28,11 +80,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-#slot-management, #log-management {
-    margin-bottom: 20px;
-    background-color: white;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

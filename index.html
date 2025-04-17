@@ -3,28 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>피에스타 클론 사이트</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>피에스타 클론 사이트</h1>
+        <nav>
+            <ul>
+                <li><a href="#account-management">계정 관리</a></li>
+                <li><a href="#ads-management">광고 관리</a></li>
+                <li><a href="#rankings">순위 조회</a></li>
+                <li><a href="#logs-management">로그 관리</a></li>
+                <li><a href="#announcements">공지사항</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="slot-management">
-            <h2>슬롯 관리</h2>
-            <!-- 슬롯 관리 관련 콘텐츠 삽입 -->
+        <!-- 계정 관리 섹션 -->
+        <section id="account-management">
+            <h2>계정 관리</h2>
+            <form id="account-form">
+                <input type="text" id="username" placeholder="사용자명" required />
+                <input type="password" id="password" placeholder="비밀번호" required />
+                <button type="submit">계정 생성</button>
+            </form>
+            <div id="account-list"></div>
         </section>
 
-        <section id="log-management">
+        <!-- 광고 관리 섹션 -->
+        <section id="ads-management">
+            <h2>광고 관리</h2>
+            <form id="ads-form">
+                <input type="text" id="ad-name" placeholder="광고 이름" required />
+                <input type="url" id="ad-url" placeholder="광고 URL" required />
+                <button type="submit">광고 등록</button>
+            </form>
+            <div id="ads-list"></div>
+        </section>
+
+        <!-- 순위 조회 섹션 -->
+        <section id="rankings">
+            <h2>순위 조회</h2>
+            <button id="view-rankings">순위 조회</button>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>이름</th>
+                        <th>점수</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- 로그 관리 섹션 -->
+        <section id="logs-management">
             <h2>로그 관리</h2>
-            <!-- 로그 관리 관련 콘텐츠 삽입 -->
+            <input type="text" id="log-search" placeholder="검색" />
+            <button id="filter-logs">필터링</button>
+            <table id="log-table">
+                <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>유형</th>
+                        <th>내용</th>
+                        <th>일시</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- 공지사항 섹션 -->
+        <section id="announcements">
+            <h2>공지사항</h2>
+            <form id="announcement-form">
+                <input type="text" id="announcement-title" placeholder="공지 제목" required />
+                <textarea id="announcement-content" placeholder="공지 내용" required></textarea>
+                <button type="submit">공지 등록</button>
+            </form>
+            <div id="announcement-list"></div>
         </section>
     </main>
 
     <footer>
-        <p>© 2023 My Website</p>
+        <p>© 2023 피에스타 클론 사이트</p>
     </footer>
 
     <script src="app.js"></script>
